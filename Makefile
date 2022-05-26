@@ -2,13 +2,17 @@ CC = gcc
 CFLAGS = -Wall -pedantic -g -O3
 
 
-all: forkit
+all: forkit tryit
 
 forkit: forkit.o
-	$(CC) $(CFLAGS) -o forkit forkit.c
-
+	$(CC) $(CFLAGS) -o forkit forkit.o
 forkit.o: forkit.c
-	$(CC) $(CFLAGS) -o forkit.o forkit.c
+	$(CC) $(CFLAGS) -c -o forkit.o forkit.c
+
+tryit: tryit.o
+	$(CC) $(CFLAGS) -o tryit tryit.o
+tryit.o: tryit.c
+	$(CC) $(CFLAGS) -c -o tryit.o tryit.c
 
 
 clean:
