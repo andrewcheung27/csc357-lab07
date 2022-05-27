@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
     }
     else {
         printf("This is the child, pid %d.\n", getpid());
+        return 0;
     }
 
     wait(&status);
