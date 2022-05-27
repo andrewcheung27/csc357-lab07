@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
     pid = fork();
     if (!pid) {
-        execl(argv[1], argv[1], 0);
+        execl(argv[1], argv[1], NULL);
         /* error message if exec returns */
         perror(argv[1]);
         exit(EXIT_FAILURE);
