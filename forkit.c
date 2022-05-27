@@ -18,5 +18,6 @@ int main(int argc, char *argv[]) {
 
     wait(&status);
     printf("This is the parent, pid %d, signing off.\n", getpid());
+    return 0;
 }
 
